@@ -12,6 +12,7 @@ samples/*
 .workbuddy/
 .workbuddy-ai/
 .agents/
+.qoder/
 
 # 系统与编辑器
 .DS_Store
