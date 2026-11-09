@@ -14,7 +14,7 @@
 | `insights/` | 背景材料 | `背景/v1.md` | 1 份 |
 | `samples/` | 厂商原文 + 索引（**只读**） | `samples/AGENTS.md` | 37 份 |
 | `samples-zh/` | 六份重点样本的中译 | `samples-zh/README.md` | 7 份 |
-| `refs/` | 论文 PDF/MD、博客摘录、分档索引 | `refs/README.md` | 17 + 14 + 4 |
+| `refs/` | 论文 PDF/MD、博客摘录、分档索引 | `refs/README.md` | 17 + 17 + 4 |
 | `reports/` | 研究报告（规范层） | `AGENTS.md-最佳实践研究报告.md` | 1 篇 |
 | `workbuddy/` | 成稿文章（叙事层） | `AGENTS.md-会被执行的文档.md` | 2 篇 |
 | `v1/` | 旧稿（冻结） | `v1/AGENTS.md` | 2 份 |

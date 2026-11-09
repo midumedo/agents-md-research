@@ -1,6 +1,6 @@
 # refs：AGENTS.md 的论文与深度文章
 
-抓取日期 2026-11-08。论文为 arXiv 原文 PDF（17 篇；14 篇已转 MD，3 篇转换排队超时，暂只有 PDF），博客为**摘录**（非全文）。
+抓取日期 2026-11-08。论文为 arXiv 原文 PDF（17 篇，已全部转 MD），博客为**摘录**（非全文）。
 
 综合这批材料 + `samples/` 写成的长文：[`../workbuddy/AGENTS.md-会被执行的文档.md`](../workbuddy/AGENTS.md-会被执行的文档.md)。
 
@@ -9,7 +9,7 @@
 ```
 refs/
   pdf/      17 篇 arXiv PDF
-  md/       14 篇转好的 Markdown（3 篇待转）（可 rg 检索）
+  md/       17 篇转好的 Markdown（可 rg 检索）
   assets/   转换出的图（236 张）
   blogs/    4 篇摘录
 ```
@@ -124,16 +124,8 @@ refs/
 
 ## 九、说明
 
-- 三篇待转：`2510.21413`、`2404.13208`、`2307.03172`。MinerU 批次 `8327fb68-419a-4b62-b6ce-54cc814683d0` 排队超时，续取：
-
-```bash
-python .agents/skills/pdf2md/scripts/pdf2md.py convert \
-  refs/pdf/2510.21413.pdf refs/pdf/2404.13208.pdf refs/pdf/2307.03172.pdf \
-  --root refs --batch-id 8327fb68-419a-4b62-b6ce-54cc814683d0 --timeout 600
-```
-
-
 - 论文 PDF 为 arXiv 公开版本；`md/` 是 MinerU 转换结果，公式有噪声（如 `$( p = 2 1 \% )$`），引用数字前回 PDF 核对。
 - 博客为摘录，保留关键数字与可引用原句；引用前回原文。
 - 未收：厂商文档、SEO 型"最佳实践"、纯产品公告。
+- 运维：MinerU 显示 `pending` 不等于失败——批次已在云端排队，用 `--batch-id` 续取即可（不重新解析、不重复扣额度）；`mineru.net` 与 `cdn-mineru.openxlab.org.cn` 为国内服务，开全局 VPN 可能访问不到，先试直连。
 - 分档是我的判断，不是论文作者的自评。若不同意某一档，改它，别改数据。
